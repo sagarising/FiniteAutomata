@@ -19,7 +19,7 @@ public class DFAMachineTest {
         finalStateSet.add(state);
         Set<Character> alphabetSet = new HashSet<>();
         alphabetSet.add('0');
-        DFAMachine dfaMachine = new DFAMachine(stateSet,state,finalStateSet);
+        DFAMachine dfaMachine = new DFAMachine(state);
         assertTrue(dfaMachine.run("0"));
     }
     @Test
@@ -37,8 +37,8 @@ public class DFAMachineTest {
         Set<Character> alphabetSet = new HashSet<>();
         alphabetSet.add('0');
         alphabetSet.add('1');
-        DFAMachine dfaMachine = new DFAMachine(stateSet,state,finalStateSet);
-        assertFalse(dfaMachine.run("01"));
+        DFAMachine dfaMachine = new DFAMachine(state);
+        assertFalse(dfaMachine.run("010101"));
     }
 
 }
