@@ -19,7 +19,6 @@ public class DFAMachineTest {
         finalStateSet.add(state);
         Set<Character> alphabetSet = new HashSet<>();
         alphabetSet.add('0');
-        TransitionTable transitionTable = new TransitionTable();
         DFAMachine dfaMachine = new DFAMachine(stateSet,state,finalStateSet);
         assertTrue(dfaMachine.run("0"));
     }
@@ -38,7 +37,6 @@ public class DFAMachineTest {
         Set<Character> alphabetSet = new HashSet<>();
         alphabetSet.add('0');
         alphabetSet.add('1');
-        TransitionTable transitionTable = new TransitionTable();
         DFAMachine dfaMachine = new DFAMachine(stateSet,state,finalStateSet);
         assertFalse(dfaMachine.run("01"));
     }
